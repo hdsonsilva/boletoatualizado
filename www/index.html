@@ -25,9 +25,9 @@
 
     <script>
         angular.module('app', ['onsen']);
-    /*    ons.ready(function() {
-      alert('ok');
-    });*/
+        ons.ready(function() {
+            
+    });
     </script>
 
     <style>
@@ -160,19 +160,20 @@
             <ons-row style="margin-top: 100px; text-align: center;">
                 <ons-col>
                     <p style="color: #999; font-size: 13px;">Informe a linha digitável do boleto para atualizá-lo</p>
-
-                    <input type="number" min="5" max="5" class="text-input--underbar" placeholder="Bloco 1" value="">
-                    <input type="number" min="5" max="5" class="text-input--underbar" placeholder="Bloco 2" value=""> 
-                    <input type="number" min="5" max="5" class="text-input--underbar" placeholder="Bloco 3" value=""> 
-                    <input type="number" min="6" max="6" class="text-input--underbar" placeholder="Bloco 4" value=""> 
-                    <input type="number" min="5" max="5" class="text-input--underbar" placeholder="Bloco 5" value=""> 
-                    <input type="number" min="6" max="6" class="text-input--underbar" placeholder="Bloco 6" value=""> 
-                    <input type="number" min="1" max="1" class="text-input--underbar" placeholder="Bloco 7" value=""> 
-                    <input type="number" min="14" max="14" class="text-input--underbar" placeholder="Bloco 8" value="">
+                    <input id='b1' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:75px">
+                    <input type="number" class="text-input--underbar" placeholder="00000" value="" style="width:75px"> 
+                    <input type="number" class="text-input--underbar" placeholder="00000" value="" style="width:75px"> 
+                    <input type="number" class="text-input--underbar" placeholder="00000" value="" style="width:75px"> 
+                    <input type="number" class="text-input--underbar" placeholder="00000" value="" style="width:75px"> 
+                    <input type="number" class="text-input--underbar" placeholder="00000" value="" style="width:75px"> 
+                    <input type="number" class="text-input--underbar" placeholder="0" value="" style="width:40px"> 
+                    <input type="number" class="text-input--underbar" placeholder="00000000000008" value="" style="width:150px">
 
                     <br>
                     <br>
-                    <ons-button modifier="light" ng-click="menu.toggleMenu()">
+                    <!--<ons-button modifier="material" ng-click="menu.toggleMenu()"> -->
+                    <ons-button modifier="material" animation="slide-down">
+                        
                         Atualizar boleto
                     </ons-button>
                     
