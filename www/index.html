@@ -96,62 +96,8 @@
 
     <script>
         angular.module('app', ['onsen']);
-        ons.ready(function() {
-            $('#b1').keyup(function(event){
-                if($(this).val().length >= 5){
-                    $(this).val($(this).val().substr(0,5));
-                    $('#b2').focus();
-                }
-            });
-
-            $('#b2').keyup(function(event){
-                if($(this).val().length >= 5){
-                    $(this).val($(this).val().substr(0,5));
-                    $('#b3').focus();
-                }
-            });
-
-            $('#b3').keyup(function(event){
-                if($(this).val().length >= 5){
-                    $(this).val($(this).val().substr(0,5));
-                    $('#b4').focus();
-                }
-            });
-
-            $('#b4').keyup(function(event){
-                if($(this).val().length >= 6){
-                    $(this).val($(this).val().substr(0,6));
-                    $('#b5').focus();
-                }
-            });
-
-            $('#b5').keyup(function(event){
-                if($(this).val().length >= 5){
-                    $(this).val($(this).val().substr(0,5));
-                    $('#b6').focus();
-                }
-            });
-
-            $('#b6').keyup(function(event){
-                if($(this).val().length >= 6){
-                    $(this).val($(this).val().substr(0,6));
-                    $('#b7').focus();
-                }
-            });
-
-            $('#b7').keyup(function(event){
-                if($(this).val().length >= 1){
-                    $(this).val($(this).val().substr(0,1));
-                    $('#b8').focus();
-                }
-            });
-
-            $('#b8').keyup(function(event){
-                if($(this).val().length >= 14){
-                    $(this).val($(this).val().substr(0,14));
-                }
-            });
-    });
+        
+        
     </script>
 
     <ons-sliding-menu menu-page="menu.html" main-page="page1.html" side="left"
@@ -216,14 +162,14 @@
             <ons-row style="margin-top: 100px; text-align: center;">
                 <ons-col>
                     <p style="color: #999; font-size: 13px;">Informe a linha digitável do boleto para atualizá-lo</p>
-                    <input id='b1' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:75px">
-                    <input id='b2' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:75px"> 
-                    <input id='b3' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:75px"> 
-                    <input id='b4' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:75px"> 
-                    <input id='b5' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:75px"> 
-                    <input id='b6' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:75px"> 
-                    <input id='b7' type="number" class="text-input--underbar" placeholder="0" value="" style="width:40px"> 
-                    <input id='b8' type="number" class="text-input--underbar" placeholder="00000000000008" value="" style="width:150px">
+                    <input id='b1' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:65px">
+                    <input id='b2' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:65px"> 
+                    <input id='b3' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:65px"> 
+                    <input id='b4' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:65px"> 
+                    <input id='b5' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:65px"> 
+                    <input id='b6' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:65px"> 
+                    <input id='b7' type="number" class="text-input--underbar" placeholder="0" value="" style="width:30px"> 
+                    <input id='b8' type="number" class="text-input--underbar" placeholder="00000000000008" value="" style="width:140px">
 
                     <br>
                     <br>
