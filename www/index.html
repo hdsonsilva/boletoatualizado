@@ -11,6 +11,7 @@
     <script src="lib/angular/angular.js"></script>
     <script src="lib/onsen/js/onsenui.js"></script>
     <script src="jquery-ui-1.8.21.custom/js/jquery-1.7.2.min.js"></script>
+     <script src="scripts/boleto.js"></script>
 
     <!-- CSS dependencies -->
     <link rel="stylesheet" href="lib/onsen/css/onsenui.css" />
@@ -91,69 +92,70 @@
     <!-- Cordova reference -->
     <script src="cordova.js"></script>
     <script src="scripts/index.js"></script>
-    <script src="scripts/boleto.js"></script>
+   
     <!-- -->
 
     <script>
         angular.module('app', ['onsen']);
         ons.ready(function() {
 
-    $('#b1').keyup(function(event){
-        if($(this).val().length >= 5){
-            $(this).val($(this).val().substr(0,5));
-            $('#b2').focus();
-        }
-    });
+            $('#b1').keyup(function(event){
+                if($(this).val().length >= 5){
+                    $(this).val($(this).val().substr(0,5));
+                    $('#b2').focus();
+                }
+            });
 
-    $('#b2').keyup(function(event){
-        if($(this).val().length >= 5){
-            $(this).val($(this).val().substr(0,5));
-            $('#b3').focus();
-        }
-    });
+            $('#b2').keyup(function(event){
+                if($(this).val().length >= 5){
+                    $(this).val($(this).val().substr(0,5));
+                    $('#b3').focus();
+                }
+            });
 
-    $('#b3').keyup(function(event){
-        if($(this).val().length >= 5){
-            $(this).val($(this).val().substr(0,5));
-            $('#b4').focus();
-        }
-    });
+            $('#b3').keyup(function(event){
+                if($(this).val().length >= 5){
+                    $(this).val($(this).val().substr(0,5));
+                    $('#b4').focus();
+                }
+            });
 
-    $('#b4').keyup(function(event){
-        if($(this).val().length >= 6){
-            $(this).val($(this).val().substr(0,6));
-            $('#b5').focus();
-        }
-    });
+            $('#b4').keyup(function(event){
+                if($(this).val().length >= 6){
+                    $(this).val($(this).val().substr(0,6));
+                    $('#b5').focus();
+                }
+            });
 
-    $('#b5').keyup(function(event){
-        if($(this).val().length >= 5){
-            $(this).val($(this).val().substr(0,5));
-            $('#b6').focus();
-        }
-    });
+            $('#b5').keyup(function(event){
+                if($(this).val().length >= 5){
+                    $(this).val($(this).val().substr(0,5));
+                    $('#b6').focus();
+                }
+            });
 
-    $('#b6').keyup(function(event){
-        if($(this).val().length >= 6){
-            $(this).val($(this).val().substr(0,6));
-            $('#b7').focus();
-        }
-    });
+            $('#b6').keyup(function(event){
+                if($(this).val().length >= 6){
+                    $(this).val($(this).val().substr(0,6));
+                    $('#b7').focus();
+                }
+            });
 
-    $('#b7').keyup(function(event){
-        if($(this).val().length >= 1){
-            $(this).val($(this).val().substr(0,1));
-            $('#b8').focus();
-        }
-    });
+            $('#b7').keyup(function(event){
+                if($(this).val().length >= 1){
+                    $(this).val($(this).val().substr(0,1));
+                    $('#b8').focus();
+                }
+            });
 
-    $('#b8').keyup(function(event){
-        if($(this).val().length >= 14){
-            $(this).val($(this).val().substr(0,14));
-        }
-    });
+            $('#b8').keyup(function(event){
+                if($(this).val().length >= 14){
+                    $(this).val($(this).val().substr(0,14));
 
-});
+                }
+            });
+
+}); 
     </script>
 
     <ons-sliding-menu menu-page="menu.html" main-page="page1.html" side="left"
@@ -230,7 +232,7 @@
                     <br>
                     <br>
                     <!--<ons-button modifier="material" ng-click="menu.toggleMenu()"> -->
-                    <ons-button modifier="material" animation="slide-down">
+                    <ons-button modifier="material" animation="slide-down" onclick="digitorVerificadorLinhaDigitavel();">
                         
                         Atualizar boleto
                     </ons-button>
