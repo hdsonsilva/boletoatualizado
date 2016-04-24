@@ -7,7 +7,7 @@ function digitorVerificadorLinhaDigitavel(){
     for (i = 0; i < fatores.length; i++) { 
 
     }
-    alert(i);
+    alert(i+"OK");
 }
 
 ons.ready(function() {
