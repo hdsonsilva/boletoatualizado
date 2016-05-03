@@ -158,26 +158,47 @@
                 <div class="center">Boleto Atualizado</div>
             </ons-toolbar>
 
-            <ons-row style="margin-top: 100px; text-align: center;">
+            <ons-row style="margin-top: 50px; text-align: center;">
                 <ons-col>
                     <p style="color: #999; font-size: 13px;">Informe a linha digitável do boleto para atualizá-lo</p>
-                    <input id='b1' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:65px">
-                    <input id='b2' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:65px"> 
-                    <input id='b3' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:65px"> 
-                    <input id='b4' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:65px"> 
-                    <input id='b5' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:65px"> 
-                    <input id='b6' type="number" class="text-input--underbar" placeholder="00000" value="" style="width:65px"> 
-                    <input id='b7' type="number" class="text-input--underbar" placeholder="0" value="" style="width:30px"> 
-                    <input id='b8' type="number" class="text-input--underbar" placeholder="00000000000008" value="" style="width:140px">
-
+                    <input id='b1' type="number" class="text-input--underbar" placeholder="00000" value="23790" style="width:65px">
+                    <input id='b2' type="number" class="text-input--underbar" placeholder="00000" value="09000" style="width:65px"> 
+                    <input id='b3' type="number" class="text-input--underbar" placeholder="00000" value="94356" style="width:65px"> 
+                    <input id='b4' type="number" class="text-input--underbar" placeholder="00000" value="680002" style="width:65px"> 
+                    <input id='b5' type="number" class="text-input--underbar" placeholder="00000" value="16012" style="width:65px"> 
+                    <input id='b6' type="number" class="text-input--underbar" placeholder="00000" value="222002" style="width:65px"> 
+                    <input id='b7' type="number" class="text-input--underbar" placeholder="0" value="1" style="width:30px"> 
+                    <input id='b8' type="number" class="text-input--underbar" placeholder="00000000000008" value="64280000089012" style="width:140px">
+                    <br>
+                    <input type='date' name='vencimento' value='' class="text-input--underbar">
                     <br>
                     <br>
                     <!--<ons-button modifier="material" ng-click="menu.toggleMenu()"> -->
-                    <ons-button modifier="material" animation="slide-down" onclick="digitorVerificadorLinhaDigitavel();">
-                        
+                    <ons-button modifier="material" animation="slide-down" onclick="verificaLinhaDigitavel();">
                         Atualizar boleto
                     </ons-button>
+                    <br>
+                    <br>
                     
+                </ons-col>
+            </ons-row>
+            <ons-row style="margin-top: 10px; text-align: center;">
+                <ons-col>
+                    <p style="color: #999; font-size: 15px;">
+                        <div id='exiberesultado'>
+
+                        </div>
+                    </p>
+                    <p style="color: #999; font-size: 15px;">
+                        <div id='exibeVencimento'>
+
+                        </div>
+                    </p>
+                    <p style="color: #999; font-size: 15px;">
+                        <div id='exibeValor'>
+
+                        </div>
+                    </p>
                 </ons-col>
             </ons-row>
         </ons-page>
