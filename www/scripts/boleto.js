@@ -49,7 +49,7 @@ function verificaLinhaDigitavel(){
     part = numb.substr(0,4) + $('#b8').val() + numb.substr(4,5) + numb.substr(10,10) + numb.substr(21,10);
     dv = mod11(part);
 
-    $("#exiberesultado").html($("#exiberesultado").html()+" "+dv+' '+$('#b8').val());
+    $("#exiberesultado").html("<p style='color: #999; font-size: 15px;'>"+$("#exiberesultado").html()+" "+dv+' '+$('#b8').val()+"</p>");
    
     //Verificando se foi detectado algum erro no codigo de barras
     if( erro == 1){
@@ -59,8 +59,8 @@ function verificaLinhaDigitavel(){
         vencimento = $('#b8').val().substr(0,4);
         
         
-        $('#exibeVencimento').html("Vencimento: "+fatorVencimento(vencimento,'fator'));
-        $('#exibeValor').html("Valor do Boleto: "+String(parseInt($('#b8').val().substr(4,8)))+','+$('#b8').val().substr(12,2));
+        $('#exibeVencimento').html("<p style='color: #999; font-size: 15px;'>Vencimento: "+fatorVencimento(vencimento,'fator')+"</p>");
+        $('#exibeValor').html("<p style='color: #999; font-size: 15px;'>Valor do Boleto: "+String(parseInt($('#b8').val().substr(4,8)))+','+$('#b8').val().substr(12,2)+"</p>");
         
     }
 }
@@ -139,7 +139,12 @@ function digitoVerificadorBloco(linhadigitavel){
 }
 
     ons.ready(function() {
-
+        data = new Date();
+        var mes = (parseInt(data.getMonth())+1);
+        var dia = data.getDate();
+        if(parseInt(dia) < 10)dia = '0'+dia;
+        if(mes < 10)mes = '0'+mes ;
+            $('#vencimento').val(dia+'/'+mes+'/'+data.getFullYear());
             $('#b1').keyup(function(event){
                 if($(this).val().length >= 5){
                     $(this).val($(this).val().substr(0,5));
